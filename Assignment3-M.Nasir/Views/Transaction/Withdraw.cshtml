@@ -1,0 +1,35 @@
+﻿@model Assignment3_M.Nasir.Models.Transaction
+@{
+    ViewBag.Title = "Withdraw";
+}
+    <div style="margin-top:10vh;">
+        @using (Html.BeginForm("ConfirmWithdraw", "Transaction"))
+        {
+            <div style="margin-top:7vh;">
+                <img src="~/Content/Withdraw.jpg" alt="" height=300 width=300 />
+            </div>
+
+            @Html.TextBoxFor(m => m.Amount, new { placeholder = "Enter Withdrawal Amount", Class = "txt" })
+            <button id="btn" type="submit">Withdraw</button>
+            <style>
+                #btn {
+                    background-color: black;
+                    color: gold;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                }
+
+                    #btn:hover {
+                        background-color: white;
+                    }
+
+                .txt {
+                    margin-top:10px;
+                    width: 400px;
+                    border: 1px solid;
+                    border-color: black;
+                    height: 2vw;
+                }
+            </style>
+        }
+    </div>

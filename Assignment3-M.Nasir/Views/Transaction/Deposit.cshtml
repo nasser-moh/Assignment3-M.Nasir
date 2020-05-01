@@ -1,0 +1,35 @@
+﻿@model Assignment3_M.Nasir.Models.Transaction
+@{
+    ViewBag.Title = "Deposit";
+}
+    <div style="margin-top:10vh;">
+        @using (Html.BeginForm("ConfirmDeposit", "Transaction"))
+        {
+
+            <div style="margin-top:7vh;">
+                <img src="~/Content/deposit.jpg" alt="" height=227 width=570 />
+            </div>
+            @Html.TextBoxFor(m => m.Amount, new { placeholder = "Enter Deposit Amount", Class = "txt" })
+            <button id="btn" type="submit">Deposit</button>
+
+            <style>
+                #btn {
+                    background-color: black;
+                    color: gold;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                }
+
+                .txt {
+                    width: 400px;
+                    border: 1px solid;
+                    border-color: black;
+                    height: 2vw;
+                }
+
+                #btn:hover {
+                    background-color: white;
+                }
+            </style>
+        }
+    </div>

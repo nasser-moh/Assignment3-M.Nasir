@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+    <style>
+        #bts{
+            width:auto
+        }
+       #bts a{
+           display:block;
+           width:auto;
+       }
+       #bts button {
+                background-color: black;
+                color: gold;
+                display: block;
+                text-align:center;
+                font-size: 16px;
+                margin: 4px 2px;
+                padding:15px 32px;
+                width:200px;
+            }
+        #bts button:hover{
+            background-color:white;
+        }
+
+        
+
+    </style>
+    <div style="margin-top:7vh;">
+        <img src="~/Content/atm_machine.jpg" alt="" height=300 width=300 />
+    </div>
+    <div id="bts" style="margin-top:5vh;">
+        
+        <a href="https://localhost:44389/Transaction/Withdraw"><button>Withdraw</button></a>
+        <a href="https://localhost:44389/Transaction/Deposit"><button>Deposit</button></a>
+        <a href="https://localhost:44389/Transaction/QuickCash"><button>Quick cash</button></a>
+        <a href="https://localhost:44389/Transaction/Inquiry"><button> Balance Inquiry</button></a>
+        
+
+    </div>
